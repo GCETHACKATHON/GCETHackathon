@@ -10,6 +10,6 @@ public class StartupRegister extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_startup_login);
+        setContentView(R.layout.activity_startup_register);
     }
 }
