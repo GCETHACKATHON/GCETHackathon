@@ -21,12 +21,12 @@
         <activity android:name=".Startup.StartupMain" />
         <activity android:name=".Investor.InvestorMain" />
         <activity android:name=".Student.StudentMain" />
-
         <activity
             android:name=".Login.StudentRegister"
-            android:label="Student Register"></activity>
+            android:label="Student Register" />
         <activity android:name=".Login.WelcomeActivity" />
-        <activity android:name=".Post.Upload_Data">          </activity>
+        <activity android:name=".Post.Upload_Data"></activity>
+        <activity android:name=".Login.Details"></activity>
     </application>
 
 </manifest>
