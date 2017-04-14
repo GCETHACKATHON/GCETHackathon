@@ -20,42 +20,18 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class Upload_Data extends AppCompatActivity   {
 
-    private static final int PICK_IMAGE_REQUEST = 234;
-    final String resName = null;
-    //Buttons
 
     private Button submitButton;
     private EditText title, description;
-
-    //ImageView
-    private ImageView imageView;
-
-    //a Uri object to store file path
-    private Uri filePath;
-
-    //  private ImageView selectImage;
-    private static final int GALLERY_REQUEST = 1;
-
     private DatabaseReference databaseReference;
-    private FirebaseAuth auth;
-    private FirebaseUser currentUser;
-    FirebaseDatabase database;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_upload__data);
-        auth = FirebaseAuth.getInstance();
-        //databaseUser = FirebaseDatabase.getInstance().getReference().child("User").child(currentUser.getUid());
-        //getting views from layout
-
         submitButton = (Button) findViewById(R.id.submitButton);
         title = (EditText) findViewById(R.id.editText1);
         description = (EditText) findViewById(R.id.editText2);
-
-        imageView = (ImageView) findViewById(R.id.imageSelect);
-
         //attaching listener
 
         submitButton.setOnClickListener( new View.OnClickListener() {
@@ -86,7 +62,6 @@ public class Upload_Data extends AppCompatActivity   {
             final DatabaseReference newPost = databaseReference.push();
             newPost.child("title").setValue(title_val);
             newPost.child("desc").setValue(desc_val);
-            newPost.child("time").setValue(System.currentTimeMillis());
             progressDialog.dismiss();
             progressDialog.dismiss();
             title.setText(null);
