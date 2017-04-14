@@ -45,13 +45,12 @@ public class LoginActivity extends AppCompatActivity {
                 Toast.makeText(LoginActivity.this, "Current token [" + tkn + "]",
                         Toast.LENGTH_LONG).show();
                 Log.d("App", "Token [" + tkn + "]");
-                Intent intent = new Intent(Intent.ACTION_SEND);
-                intent.setType("text/plain");
-                intent.putExtra(Intent.EXTRA_TEXT, "hey");
-                startActivity(Intent.createChooser(intent, "Share using"));
+                Intent intent = new Intent(LoginActivity.this, InvestorRegister.class);
+
+                // intent.setType("text/plain");
+                // intent.putExtra(Intent.EXTRA_TEXT, "hey");
+                startActivity(intent);
             }
         });
-
-
     }
 }
