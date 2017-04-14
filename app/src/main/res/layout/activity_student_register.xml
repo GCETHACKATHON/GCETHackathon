@@ -6,30 +6,4 @@
     android:layout_height="match_parent"
     tools:context="com.animator_abhi.gcethackathon.Login.StudentRegister">
 
-    <android.support.design.widget.TextInputLayout
-        android:layout_width="368dp"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="16dp">
-
-        <EditText
-            android:id="@+id/Name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:ems="10"
-            android:hint="Name"
-            android:inputType="textPersonName" />
-
-        <android.support.design.widget.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1">
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="hint" />
-        </android.support.design.widget.TextInputLayout>
-    </android.support.design.widget.TextInputLayout>
 </android.support.constraint.ConstraintLayout>

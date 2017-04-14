@@ -18,10 +18,10 @@
         </activity>
         <activity android:name=".Login.StartupRegister" />
         <activity android:name=".Login.InvestorRegister" />
-        <activity android:name=".Login.StudentRegister" />
         <activity android:name=".Startup.StartupMain" />
         <activity android:name=".Investor.InvestorMain" />
-        <activity android:name=".Student.StudentMain"></activity>
+        <activity android:name=".Student.StudentMain" />
+        <activity android:name=".Login.StudentRegister"></activity>
     </application>
 
 </manifest>
