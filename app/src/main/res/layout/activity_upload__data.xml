@@ -65,20 +65,6 @@
                 android:text="Submit Button"
                 android:textColor="@color/colorWhite" />
 
-            <ImageView
-                android:id="@+id/imageSelect"
-                android:layout_width="wrap_content"
-                android:layout_height="240dp"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:adjustViewBounds="true"
-                android:background="#00ffffff"
-                android:clickable="false"
-                android:scaleType="fitCenter"
-                app:srcCompat="@mipmap/add_btn" />
-
             <Button
                 android:id="@+id/buttonChoose"
                 android:layout_width="match_parent"
