@@ -23,7 +23,8 @@
         <activity android:name=".Student.StudentMain" />
         <activity
             android:name=".Login.StudentRegister"
-            android:label="Student Register"></activity>
+            android:label="Student Register" />
+        <activity android:name=".Post.MainActivity"></activity>
     </application>
 
 </manifest>
