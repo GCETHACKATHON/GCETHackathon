@@ -10,18 +10,17 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".Login.LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity android:name=".Login.StartupRegister" />
         <activity android:name=".Login.InvestorRegister" />
         <activity android:name=".Startup.StartupMain" />
         <activity android:name=".Investor.InvestorMain" />
         <activity android:name=".Student.StudentMain" />
-        <activity android:name=".Post.Upload_Data"> <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter></activity>
 
         <activity
             android:name=".Login.StudentRegister"

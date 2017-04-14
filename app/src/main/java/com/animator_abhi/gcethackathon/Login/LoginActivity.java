@@ -146,7 +146,12 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
                             final DatabaseReference ref = database.getReference().child(type).child(user.getUid());
                             Prefs.setUserId(getApplicationContext(), user.getUid());
                             ref.child("status").setValue("online");
-                            startActivity(new Intent(LoginActivity.this, WelcomeActivity.class));
+                            if (type == "startup")
+                                startActivity(new Intent(LoginActivity.this, StartupRegister.class));
+                            if (type == "student")
+                                startActivity(new Intent(LoginActivity.this, StudentRegister.class));
+                            if (type == "investor")
+                                startActivity(new Intent(LoginActivity.this, InvestorRegister.class));
                             finish();
                         }
                     }
