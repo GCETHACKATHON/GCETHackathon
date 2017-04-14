@@ -12,6 +12,7 @@
         android:layout_height="wrap_content">
 
         <EditText
+            android:id="@+id/startup_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Startup Name" />
@@ -22,9 +23,13 @@
         android:layout_height="wrap_content">
 
         <EditText
+            android:id="@+id/startup_description"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Description" />
+            android:hint="Description"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="textMultiLine" />
 
     </android.support.design.widget.TextInputLayout>
     <android.support.design.widget.TextInputLayout
@@ -32,9 +37,16 @@
         android:layout_height="wrap_content">
 
         <EditText
+            android:id="@+id/startup_Founder"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Founder Name" />
 
     </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:id="@+id/startup_register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Register Startup" />
 </LinearLayout>
