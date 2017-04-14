@@ -27,9 +27,9 @@ public class MainActivity extends AppCompatActivity {
 
     private void setupViewPager(ViewPager viewPager) {
         Adapter adapter = new Adapter(getSupportFragmentManager());
-        adapter.addFragment(new CardContentFragment(), "Today");
-        adapter.addFragment(new CardContentFragment(), "Weekly");
-        adapter.addFragment(new CardContentFragment(), "Order");
+        adapter.addFragment(new CardContentFragment(), "Home");
+        adapter.addFragment(new CardContentFragment(), "Hot Shot");
+        adapter.addFragment(new CardContentFragment(), "My Profile");
         viewPager.setAdapter(adapter);
     }
 
