@@ -12,7 +12,8 @@ import com.animator_abhi.gcethackathon.Startup.StartupMain;
 
 public class InvestorRegister extends AppCompatActivity {
     Button investor_register;
-    EditText investor_name,investor_company,investor_description,investor_potential;
+    EditText investor_name, investor_company, investor_description, investor_potential;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,11 +27,11 @@ public class InvestorRegister extends AppCompatActivity {
         investor_register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(InvestorRegister.this,StartupMain.class);
-                i.putExtra("i_n",investor_name.getText().toString());
-                i.putExtra("i_c",investor_company.getText().toString());
-                i.putExtra("i_d",investor_description.getText().toString());
-                i.putExtra("i_p",investor_potential.getText().toString());
+                Intent i = new Intent(InvestorRegister.this, StartupMain.class);
+                i.putExtra("i_n", investor_name.getText().toString());
+                i.putExtra("i_c", investor_company.getText().toString());
+                i.putExtra("i_d", investor_description.getText().toString());
+                i.putExtra("i_p", investor_potential.getText().toString());
                 startActivity(i);
             }
         });
