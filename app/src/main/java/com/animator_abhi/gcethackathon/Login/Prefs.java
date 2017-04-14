@@ -17,7 +17,7 @@ public class Prefs {
     private static final String USERNAME = "userName";
     private static final String EMAIL = "email";
     private static final String PHOTOURI = "photoUri";
-    private static final String STATUS = "0";
+    private static final String STATUS="0";
 
 
     private static SharedPreferences getPrefs(Context context) {
