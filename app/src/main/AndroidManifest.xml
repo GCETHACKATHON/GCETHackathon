@@ -24,6 +24,7 @@
         <activity
             android:name=".Login.StudentRegister"
             android:label="Student Register"></activity>
+        <activity android:name=".Login.WelcomeActivity" />
     </application>
 
 </manifest>
