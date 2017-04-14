@@ -58,6 +58,8 @@
         android:id="@+id/investor_register"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Register Investor" />
+        android:background="@color/authui_colorAccent"
+        android:text="Register Investor"
+        android:textColor="@color/colorWhite" />
 
 </LinearLayout>
