@@ -8,4 +8,7 @@
     <string name="add_post">Add post</string>
     <string name="Student_Register">Student Register</string>
     <string name="Student_Idea_StartUp">Idea About StartUp</string>
+    <string name="startup">startup</string>
+    <string name="student">student</string>
+    <string name="investor">investor</string>
 </resources>
