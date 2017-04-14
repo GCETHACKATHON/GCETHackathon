@@ -26,6 +26,7 @@
             android:name=".Login.StudentRegister"
             android:label="Student Register"></activity>
         <activity android:name=".Login.WelcomeActivity" />
+        <activity android:name=".Post.Upload_Data" />
     </application>
 
 </manifest>

@@ -16,8 +16,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.storage.FirebaseStorage;
-import com.google.firebase.storage.StorageReference;
+
 
 public class Upload_Data extends AppCompatActivity   {
 
@@ -36,7 +35,7 @@ public class Upload_Data extends AppCompatActivity   {
 
     //  private ImageView selectImage;
     private static final int GALLERY_REQUEST = 1;
-    private StorageReference storageReference;
+
     private DatabaseReference databaseReference;
     private FirebaseAuth auth;
     private FirebaseUser currentUser;
