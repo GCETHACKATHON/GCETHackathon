@@ -7,6 +7,8 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
+import android.widget.Button;
 
 import com.animator_abhi.gcethackathon.R;
 
@@ -19,6 +21,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
         ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);// Setting ViewPager for each Tabs
         setupViewPager(viewPager);
         TabLayout tabs = (TabLayout) findViewById(R.id.tabs);// Set Tabs inside Toolbar
@@ -27,8 +31,8 @@ public class MainActivity extends AppCompatActivity {
 
     private void setupViewPager(ViewPager viewPager) {
         Adapter adapter = new Adapter(getSupportFragmentManager());
+        adapter.addFragment(new HotShotFragment(), "Hot Shot");
         adapter.addFragment(new CardContentFragment(), "Home");
-        adapter.addFragment(new CardContentFragment(), "Hot Shot");
         adapter.addFragment(new CardContentFragment(), "My Profile");
         viewPager.setAdapter(adapter);
     }
@@ -54,6 +58,10 @@ public class MainActivity extends AppCompatActivity {
         public void addFragment(Fragment fragment, String title) {
             mFragmentList.add(fragment);
             mFragmentTitleList.add(title);
+        }
+        @Override
+        public CharSequence getPageTitle(int position) {
+            return mFragmentTitleList.get(position);
         }
     }
 }

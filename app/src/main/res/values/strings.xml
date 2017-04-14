@@ -11,7 +11,4 @@
     <string name="startup">startup</string>
     <string name="student">student</string>
     <string name="investor">investor</string>
-    <string name="email">email</string>
-    <string name="interst">interst</string>
-    <string name="founder_name">founder name</string>
 </resources>
