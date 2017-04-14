@@ -21,11 +21,9 @@
         <activity android:name=".Startup.StartupMain" />
         <activity android:name=".Investor.InvestorMain" />
         <activity android:name=".Student.StudentMain" />
-
         <activity
             android:name=".Login.StudentRegister"
             android:label="Student Register"></activity>
-        <activity android:name=".Login.WelcomeActivity" />
     </application>
 
 </manifest>
