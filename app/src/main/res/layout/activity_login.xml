@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.animator_abhi.gcethackathon.LoginActivity">
+    tools:context="com.animator_abhi.gcethackathon.Login.LoginActivity">
 
     <Button
         android:id="@+id/buttonSignIn"
