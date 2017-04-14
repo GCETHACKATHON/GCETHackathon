@@ -17,6 +17,7 @@ public class Prefs {
     private static final String USERNAME = "userName";
     private static final String EMAIL = "email";
     private static final String PHOTOURI = "photoUri";
+    private static final String STATUS = "0";
 
 
     private static SharedPreferences getPrefs(Context context) {
@@ -33,6 +34,16 @@ public class Prefs {
         getPrefs(context).edit().putBoolean(IS_PERSISTENCE, value).commit();
     }
 */
+
+    @NonNull
+    public static String getStatus(Context context) {
+        return getPrefs(context).getString(STATUS, "");
+    }
+
+    public static void setStatus(Context context, String value) {
+        getPrefs(context).edit().putString(STATUS, value).commit();
+    }
+
     @NonNull
     public static String getUserId(Context context) {
         return getPrefs(context).getString(USER_ID, "");
