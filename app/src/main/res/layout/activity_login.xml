@@ -3,31 +3,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
     android:orientation="vertical"
     tools:context="com.animator_abhi.gcethackathon.Login.LoginActivity">
 
 
     <TextView
         android:id="@+id/tv"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="10dp"
         android:gravity="center"
-        android:paddingTop="16dp"
-        android:text="Register As"
-        android:textSize="36dp"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="0dp"
-
-        />
+        android:paddingTop="10dp"
+        android:text="Who Are You?"
+        android:textSize="36dp" />
 
     <Button
         android:id="@+id/buttonInvestors"
 
 
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_margin="10dp"
         android:background="@drawable/boder"
         android:backgroundTint="@color/colorAccent"
         android:text="@string/investor"
@@ -37,9 +34,10 @@
 
     <Button
         android:id="@+id/buttonStartup"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_margin="10dp"
         android:background="@drawable/boder"
         android:backgroundTint="@color/colorAccent"
         android:text="@string/startup"
@@ -48,9 +46,9 @@
 
     <Button
         android:id="@+id/buttonStudent"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
         android:background="@drawable/boder"
         android:backgroundTint="@color/colorAccent"
         android:text="@string/student"
