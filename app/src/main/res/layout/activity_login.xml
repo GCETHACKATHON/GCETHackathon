@@ -55,4 +55,20 @@
 
         tools:layout_editor_absoluteX="147dp"
         tools:layout_editor_absoluteY="77dp" />
+
+    <Button
+        android:id="@+id/sign_in_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dip"
+        android:background="@null"
+        android:onClick="login"
+        android:text="@string/btn_link_to_login"
+        android:textAllCaps="false"
+        android:textColor="@color/colorAccent"
+        android:textSize="15dp" />
+    <!-- Login Button -->
+
+    <!-- Link to Login Screen -->
+
 </LinearLayout>
