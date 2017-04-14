@@ -5,40 +5,40 @@ package com.animator_abhi.gcethackathon.Models;
  */
 
 public class InvesterModel {
-    String Name;
-    String CompanyName;
-    String About;
+    String name;
+    String companyName;
+    String about;
 
     public InvesterModel() {
     }
 
     public InvesterModel(String name, String companyName, String about) {
-        Name = name;
-        CompanyName = companyName;
-        About = about;
+        this.name = name;
+        this.companyName = companyName;
+        this.about = about;
     }
 
     public String getName() {
-        return Name;
+        return name;
     }
 
     public void setName(String name) {
-        Name = name;
+        this.name = name;
     }
 
     public String getCompanyName() {
-        return CompanyName;
+        return companyName;
     }
 
     public void setCompanyName(String companyName) {
-        CompanyName = companyName;
+        this.companyName = companyName;
     }
 
     public String getAbout() {
-        return About;
+        return about;
     }
 
     public void setAbout(String about) {
-        About = about;
+        this.about = about;
     }
 }
