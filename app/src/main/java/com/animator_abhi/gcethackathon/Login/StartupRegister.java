@@ -28,7 +28,7 @@ public class StartupRegister extends AppCompatActivity {
                 Intent i = new Intent(StartupRegister.this,StartupMain.class);
                 i.putExtra("s_n",startup_name.getText().toString());
                 i.putExtra("s_f",startup_founder.getText().toString());
-                i.putExtra("s_d",startup_register.getText().toString());
+                i.putExtra("s_d",startup_description.getText().toString());
                 startActivity(i);
             }
         });
