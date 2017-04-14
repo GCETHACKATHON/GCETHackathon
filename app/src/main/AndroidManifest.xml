@@ -24,10 +24,6 @@
         <activity
             android:name=".Login.StudentRegister"
             android:label="Student Register"></activity>
-<<<<<<<<< Temporary merge branch 1
-=========
-        <activity android:name=".Main.Upload_Data"></activity>
->>>>>>>>> Temporary merge branch 2
     </application>
 
 </manifest>

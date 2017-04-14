@@ -1,4 +1,4 @@
-package com.animator_abhi.gcethackathon.Main;
+package com.animator_abhi.gcethackathon.Post;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
