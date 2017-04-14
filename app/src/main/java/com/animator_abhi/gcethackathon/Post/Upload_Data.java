@@ -1,7 +1,7 @@
 package com.animator_abhi.gcethackathon.Post;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 
 import com.animator_abhi.gcethackathon.R;
 
