@@ -2,23 +2,23 @@
 <resources>
 
     <string-array name="days">
-        <item>Monday</item>
-        <item>Tuesday</item>
-        <item>Wednesday</item>
-        <item>Thursday</item>
-        <item>Friday</item>
-        <item>Saturday</item>
-        <item>Sunday</item>
+        <item>BizTech</item>
+        <item>Secure Era</item>
+        <item>RTD Works</item>
+        <item>Excel Technology</item>
+        <item>AI-Dev</item>
+        <item>Smart India</item>
+        <item>GameDev</item>
     </string-array>
 
     <string-array name="menu_lunch">
-        <item>Dal Makhani Makhanwali, Cabbage Capsicum Sabji, Rice, Tawa Roti(4)</item>
-        <item>Kadhi Pakoda, Aloo Cabbage Sabji, Rice, Tawa Roti(4)</item>
-        <item>Dal Chatpati, Capsicum Aloo Sabji, Rice, Tawa Roti(4)</item>
-        <item>Rajma chatpati, Zeera Aloo Sabji, Rice, Tawa Roti(4)</item>
-        <item>Rajma chatpati, Plain Aloo Sabji, Rice, Tawa Roti(4)</item>
-        <item>Chatpati Dal Kholhapuri, Cabbage Capsicum Sabji, Rice, Tawa Roti(4)</item>
-        <item>Makhani Makhan Dal, Cabbage Aloo Sabji, Rice, Tawa Roti(4)</item>
+        <item>One to One Chat android App</item>
+        <item>Women Seurity</item>
+        <item>Workplace Automation</item>
+        <item>Online Feedback System</item>
+        <item>Chat Bot (Machine Learning)</item>
+        <item>Smart Village Street Light Control System</item>
+        <item>Snake 2d Game</item>
     </string-array>
 
     <array name="menu_picture">
