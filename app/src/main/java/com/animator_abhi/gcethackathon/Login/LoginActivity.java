@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.animator_abhi.gcethackathon.Post.MainActivity;
 import com.animator_abhi.gcethackathon.R;
 import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
@@ -30,6 +31,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class LoginActivity extends AppCompatActivity implements GoogleApiClient.OnConnectionFailedListener,
         View.OnClickListener {
 
+
     private static final String TAG = "SignInActivity";
     private static final int RC_SIGN_IN = 9001;
     String type="";
@@ -44,7 +46,12 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         database = FirebaseDatabase.getInstance();
-
+        if(Prefs.getStatus(getApplicationContext()).equals("1")) {
+            Intent i = new Intent(LoginActivity.this, MainActivity.class);
+            Log.d("status",Prefs.getStatus(LoginActivity.this));
+            startActivity(i);
+            finish();
+        }
         // Assign fields
         startup = (Button) findViewById(R.id.buttonStartup);
         investor = (Button) findViewById(R.id.buttonInvestors);
@@ -145,6 +152,7 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
                         } else {
                             final DatabaseReference ref = database.getReference().child(type).child(user.getUid());
                             Prefs.setUserId(getApplicationContext(), user.getUid());
+                            Prefs.setStatus(getApplicationContext(), "1");
                             ref.child("status").setValue("online");
                             if (type == "startup")
                                 startActivity(new Intent(LoginActivity.this, StartupRegister.class));

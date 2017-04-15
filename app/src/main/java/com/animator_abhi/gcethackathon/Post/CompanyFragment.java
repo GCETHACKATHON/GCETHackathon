@@ -17,6 +17,7 @@
 package com.animator_abhi.gcethackathon.Post;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
@@ -25,6 +26,9 @@ import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -33,76 +37,100 @@ import android.widget.TextView;
 import com.animator_abhi.gcethackathon.Models.StudentModel;
 import com.animator_abhi.gcethackathon.R;
 
+import java.util.List;
+
 public class CompanyFragment extends Fragment {
+    Intent i=null;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+         i=new Intent(getActivity(),Upload_Data.class);
         RecyclerView recyclerView = (RecyclerView) inflater.inflate(R.layout.recycler_view, container, false);
-        ContentAdapter adapter = new ContentAdapter(recyclerView.getContext());
+        ViewHolder.ContentAdapter adapter = new ViewHolder.ContentAdapter(recyclerView.getContext());
         recyclerView.setAdapter(adapter);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+
         return recyclerView;
+
+
+
+
+
+
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
         public TextView name;
         public TextView email;
-        TextView college;
-        TextView intrest;
-        public ImageView picture;
-        public TextView projectName;
+        TextView cname;
+        TextView website;
         public TextView description;
+        public ImageView picture;
+        public TextView duration;
+
         StudentModel studentModel;
 
         public ViewHolder(LayoutInflater inflater, ViewGroup parent) {
             super(inflater.inflate(R.layout.company_profile, parent, false));
-            name = (TextView) itemView.findViewById(R.id.student_name);
+            name = (TextView) itemView.findViewById(R.id.startup_founder);
             email = (TextView) itemView.findViewById(R.id.email);
+            cname = (TextView) itemView.findViewById(R.id.Company_name);
+            website = (TextView) itemView.findViewById(R.id.website);
+
             picture = (ImageView) itemView.findViewById(R.id.card_image);
             name = (TextView) itemView.findViewById(R.id.card_title);
             description = (TextView) itemView.findViewById(R.id.card_text);
-            college=(TextView) itemView.findViewById(R.id.Student_College);
-            intrest=(TextView) itemView.findViewById(R.id.intrest);
-            
-            
+            duration = (TextView) itemView.findViewById(R.id.duration);
+
 
         }
-    }
 
-    public static class ContentAdapter extends RecyclerView.Adapter<ViewHolder> {
 
-        private static final int LENGTH = 7;
-        private final String[] mDays;
-        private final String[] mMenu_lunch;
-        private final Drawable[] mMenu_Picture;
+        public static class ContentAdapter extends RecyclerView.Adapter<MyProfileFragment.ViewHolder> {
 
-        public ContentAdapter(Context context) {
-            Resources resources = context.getResources();
-            mDays = resources.getStringArray(R.array.days);
-            mMenu_lunch = resources.getStringArray(R.array.menu_lunch);
-            TypedArray a = resources.obtainTypedArray(R.array.menu_picture);
-            mMenu_Picture = new Drawable[a.length()];
-            for (int i = 0; i < mMenu_Picture.length; i++) {
-                mMenu_Picture[i] = a.getDrawable(i);
+            private static final int LENGTH = 1;
+            private final String[] title;
+            private final String[] description;
+            private final Drawable[] picture;
+
+            public ContentAdapter(Context context) {
+                Resources resources = context.getResources();
+                title = resources.getStringArray(R.array.Title);
+                description = resources.getStringArray(R.array.Description);
+                TypedArray a = resources.obtainTypedArray(R.array.Picture);
+                picture = new Drawable[a.length()];
+                for (int i = 0; i < picture.length; i++) {
+                    picture[i] = a.getDrawable(i);
+                }
+                a.recycle();
             }
-            a.recycle();
+
+            @Override
+            public MyProfileFragment.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+                return new MyProfileFragment.ViewHolder(LayoutInflater.from(parent.getContext()), parent);
+            }
+
+            @Override
+            public void onBindViewHolder(MyProfileFragment.ViewHolder holder, int position) {
+                holder.name.setText(title[position % title.length]);
+                holder.description.setText(description[position % description.length]);
+            }
+
+            @Override
+            public void onBindViewHolder(MyProfileFragment.ViewHolder holder, int position, List<Object> payloads) {
+                holder.picture.setImageDrawable(picture[position % picture.length]);
+                holder.name.setText(title[position % title.length]);
+                holder.description.setText(description[position % description.length]);
+            }
+
+            @Override
+            public int getItemCount() {
+                return LENGTH;
+            }
+
         }
 
-        @Override
-        public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-            return new ViewHolder(LayoutInflater.from(parent.getContext()), parent);
-        }
-
-        @Override
-        public void onBindViewHolder(ViewHolder holder, int position) {
-            holder.picture.setImageDrawable(mMenu_Picture[position % mMenu_Picture.length]);
-            holder.name.setText(mDays[position % mDays.length]);
-            holder.description.setText(mMenu_lunch[position % mMenu_lunch.length]);
-        }
-
-        @Override
-        public int getItemCount() {
-            return LENGTH;
-        }
     }
+
+
 }

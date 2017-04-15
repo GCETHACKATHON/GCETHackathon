@@ -1,34 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string-array name="days">
-        <item>Monday</item>
-        <item>Tuesday</item>
-        <item>Wednesday</item>
-        <item>Thursday</item>
-        <item>Friday</item>
-        <item>Saturday</item>
-        <item>Sunday</item>
+    <string-array name="Title">
+        <item>Custom Search</item>
+        <item>Uber</item>
+        <item>Hot or Not</item>
+        <item>One to One Chat</item>
+        <item>Weather</item>
+        <item>Broadcast App</item>
+        <item>Group</item>
     </string-array>
 
-    <string-array name="menu_lunch">
-        <item>Dal Makhani Makhanwali, Cabbage Capsicum Sabji, Rice, Tawa Roti(4)</item>
-        <item>Kadhi Pakoda, Aloo Cabbage Sabji, Rice, Tawa Roti(4)</item>
-        <item>Dal Chatpati, Capsicum Aloo Sabji, Rice, Tawa Roti(4)</item>
-        <item>Rajma chatpati, Zeera Aloo Sabji, Rice, Tawa Roti(4)</item>
-        <item>Rajma chatpati, Plain Aloo Sabji, Rice, Tawa Roti(4)</item>
-        <item>Chatpati Dal Kholhapuri, Cabbage Capsicum Sabji, Rice, Tawa Roti(4)</item>
-        <item>Makhani Makhan Dal, Cabbage Aloo Sabji, Rice, Tawa Roti(4)</item>
+    <string-array name="Description">
+        <item>Create a Custom Search </item>
+        <item>Create A Taxi Booking App </item>
+        <item>Create a Hot or Not public rating app</item>
+        <item>Create a Chat app</item>
+        <item>Create a Weather</item>
+        <item>Create a Broadcast App</item>
+        <item>Create a group Chat</item>
+    </string-array>
+    <string-array name="Duration">
+        <item>10 days</item>
+        <item>8 days</item>
+        <item>14 days</item>
+        <item>10 days</item>
+        <item>15 days</item>
+        <item>19 days</item>
+        <item>10 days</item>
     </string-array>
 
-    <array name="menu_picture">
-        <item>@drawable/download</item>
-        <item>@drawable/download</item>
-        <item>@drawable/download</item>
-        <item>@drawable/download</item>
-        <item>@drawable/download</item>
-        <item>@drawable/download</item>
-        <item>@drawable/download</item>
+    <array name="Picture">
+
+        <item>@drawable/ent</item>
+        <item>@drawable/exm</item>
+        <item>@drawable/cht</item>
+        <item>@drawable/ent</item>
+        <item>@drawable/exm</item>
+        <item>@drawable/expnse</item>
+        <item>@drawable/wea</item>
+
+
+
+    </array>
+    <string-array name="places">
+        <item>Custom Search</item>
+        <item>Uber</item>
+        <item>Hot or Not</item>
+        <item>One to One Chat</item>
+        <item>Weather</item>
+        <item>Broadcast App</item>
+        <item>Group</item>
+    </string-array>
+
+    <string-array name="places_details_1">
+        <item>Create a Custom Search </item>
+        <item>Create A Taxi Booking App </item>
+        <item>Create a Hot or Not public rating app</item>
+        <item>Create a Chat app</item>
+        <item>Create a Weather</item>
+        <item>Create a Broadcast App</item>
+        <item>Create a group Chat</item>
+    </string-array>
+    <string-array name="places_locations_1">
+        <item>10 days</item>
+        <item>15 days</item>
+        <item>19 days</item>
+        <item>10 days</item>
+        <item>10 days</item>
+        <item>8 days</item>
+        <item>14 days</item>
+
+    </string-array>
+
+    <array name="places_pictures_1">
+        <item>@drawable/ent</item>
+        <item>@drawable/exm</item>
+        <item>@drawable/cht</item>
+        <item>@drawable/ent</item>
+        <item>@drawable/exm</item>
+        <item>@drawable/wea</item>
+        <item>@drawable/expnse</item>
     </array>
 
 </resources>

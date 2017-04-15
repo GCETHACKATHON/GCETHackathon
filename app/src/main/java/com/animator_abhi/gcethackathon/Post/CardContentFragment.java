@@ -32,13 +32,16 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.animator_abhi.gcethackathon.Models.StudentModel;
 import com.animator_abhi.gcethackathon.R;
+
+import java.util.List;
 
 public class CardContentFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         RecyclerView recyclerView = (RecyclerView) inflater.inflate(R.layout.recycler_view, container, false);
-        ContentAdapter adapter = new ContentAdapter(recyclerView.getContext());
+        ViewHolder.ContentAdapter adapter = new ViewHolder.ContentAdapter(recyclerView.getContext());
         recyclerView.setAdapter(adapter);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
@@ -46,61 +49,65 @@ public class CardContentFragment extends Fragment {
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
-        public ImageView picture;
         public TextView name;
         public TextView description;
+        public ImageView picture;
+
+        StudentModel studentModel;
 
         public ViewHolder(LayoutInflater inflater, ViewGroup parent) {
             super(inflater.inflate(R.layout.item_card, parent, false));
+
             picture = (ImageView) itemView.findViewById(R.id.card_image);
             name = (TextView) itemView.findViewById(R.id.card_title);
             description = (TextView) itemView.findViewById(R.id.card_text);
 
-            Button button = (Button) itemView.findViewById(R.id.card_button);
-            button.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
 
-                    Snackbar.make(v, "Your Meal is Added", Snackbar.LENGTH_LONG).show();
+        }
+
+
+        public static class ContentAdapter extends RecyclerView.Adapter<MyProfileFragment.ViewHolder> {
+
+            private static final int LENGTH = 4;
+            private final String[] title;
+            private final String[] description;
+            private final Drawable[] picture;
+
+            public ContentAdapter(Context context) {
+                Resources resources = context.getResources();
+                title = resources.getStringArray(R.array.Title);
+                description = resources.getStringArray(R.array.Description);
+                TypedArray a = resources.obtainTypedArray(R.array.Picture);
+                picture = new Drawable[a.length()];
+                for (int i = 0; i < picture.length; i++) {
+                    picture[i] = a.getDrawable(i);
                 }
-            });
-        }
-    }
-
-    public static class ContentAdapter extends RecyclerView.Adapter<ViewHolder> {
-
-        private static final int LENGTH = 7;
-        private final String[] mDays;
-        private final String[] mMenu_lunch;
-        private final Drawable[] mMenu_Picture;
-
-        public ContentAdapter(Context context) {
-            Resources resources = context.getResources();
-            mDays = resources.getStringArray(R.array.days);
-            mMenu_lunch = resources.getStringArray(R.array.menu_lunch);
-            TypedArray a = resources.obtainTypedArray(R.array.menu_picture);
-            mMenu_Picture = new Drawable[a.length()];
-            for (int i = 0; i < mMenu_Picture.length; i++) {
-                mMenu_Picture[i] = a.getDrawable(i);
+                a.recycle();
             }
-            a.recycle();
-        }
 
-        @Override
-        public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-            return new ViewHolder(LayoutInflater.from(parent.getContext()), parent);
-        }
+            @Override
+            public MyProfileFragment.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+                return new MyProfileFragment.ViewHolder(LayoutInflater.from(parent.getContext()), parent);
+            }
 
-        @Override
-        public void onBindViewHolder(ViewHolder holder, int position) {
-            holder.picture.setImageDrawable(mMenu_Picture[position % mMenu_Picture.length]);
-            holder.name.setText(mDays[position % mDays.length]);
-            holder.description.setText(mMenu_lunch[position % mMenu_lunch.length]);
-        }
+            @Override
+            public void onBindViewHolder(MyProfileFragment.ViewHolder holder, int position) {
+                holder.name.setText(title[position % title.length]);
+                holder.description.setText(description[position % description.length]);
+            }
 
-        @Override
-        public int getItemCount() {
-            return LENGTH;
+            @Override
+            public void onBindViewHolder(MyProfileFragment.ViewHolder holder, int position, List<Object> payloads) {
+                holder.picture.setImageDrawable(picture[position % picture.length]);
+                holder.name.setText(title[position % title.length]);
+                holder.description.setText(description[position % description.length]);
+            }
+
+            @Override
+            public int getItemCount() {
+                return LENGTH;
+            }
+
         }
     }
 }

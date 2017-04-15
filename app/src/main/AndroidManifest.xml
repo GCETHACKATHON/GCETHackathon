@@ -16,17 +16,21 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Login.StartupRegister" />
+        <activity android:name=".Login.StartupRegister"
+            android:label="Company Register"/>
         <activity android:name=".Login.InvestorRegister" />
         <activity android:name=".Startup.StartupMain" />
         <activity android:name=".Investor.InvestorMain" />
         <activity android:name=".Student.StudentMain" />
-
         <activity
             android:name=".Login.StudentRegister"
-            android:label="Student Register"></activity>
+            android:label="Student Register" />
         <activity android:name=".Login.WelcomeActivity" />
-        <activity android:name=".Post.Upload_Data">          </activity>
+        <activity android:name=".Post.Upload_Data"
+            android:label="Upload Project Info"></activity>
+        <activity android:name=".Post.Detail"></activity>
+        <activity android:name=".Post.MainActivity"
+            android:label="Dashboard"></activity>
     </application>
 
 </manifest>
